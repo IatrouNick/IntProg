@@ -1,0 +1,241 @@
+#STYLES.CSS 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    height: 100%;
+    margin: 50%;
+    padding: 0;
+
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.clothType{
+    margin-left: 40%;
+}
+
+.imageSize {
+    display: block;
+    margin-left: 10%;
+    width: 80%;
+}
+
+.items {
+    margin-left: 20%;
+    margin-right: 20%;
+
+
+}
+
+.list-group-item {
+
+    width: 50%;
+    float: left;
+    font-size: x-large;
+}
+
+#choices {
+    display: block;
+    height: min-content;
+}
+
+/* Styles for FOOTER - Start */
+
+#footer {
+    clear: both;
+    position: relative;
+    height: 100px;
+    
+}
+.copyright {
+    margin-top: 10px;
+    text-align: center;
+    font: size 20px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+
+.socials {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.socials>a {
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 10px solid #ccc;
+    margin: 0 8px;
+    color: inherit;
+    opacity: 0.75;
+}
+
+.socials>a:hover {
+    opacity: 0.9;
+}
+
+
+
+/* Style the icon bar links */
+.icon-bar a {
+    display: inline-block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+}
+
+
+.facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.instagram {
+    background: #e0225b;
+    color: rgb(114, 66, 66);
+}
+
+
+
+
+/* Styles for FOOTER - End */
+
+
+/* Styles for CAROUSEL - Start */
+
+
+.carousel-item {
+    width: 100%;
+    height: 80%;
+
+}
+
+/* Styles for CAROUSEL - End */
+
+
+
+/* Styles for GRID - Start */
+
+.image-grid {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.grid-image {
+    /* images display inline by default and act like text. We want them to act like divs, so display block */
+    display: block;
+    /* our width setting for mobile, one image per line */
+    flex-basis: 30%;
+    /* provide some space between our images */
+    padding: 20px;
+    /* ensure padding doesn't cause images to wrap, it should be within the width rather than in addition */
+    box-sizing: border-box;
+    margin: auto;
+}
+
+
+.imageContainer {
+    position: relative;
+    max-width: 800px;
+    /* Maximum width */
+    margin: 0 auto;
+    /* Center it */
+}
+
+.imageContainer .imageText {
+    text-align: center;
+    position: absolute;
+    /* Position the background text */
+    bottom: 0;
+    /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0);
+    /* Fallback color */
+    background: rgba(0, 0, 0, 0.5);
+    /* Black background with 0.5 opacity */
+    color: #000000;
+    /* Grey text */
+    width: 100%;
+    /* Full width */
+}
+
+
+/* Styles for GRID - End */
+
+/*Styles for indexpage */
+
+#title {
+    font-size: 2em;
+    color: aliceblue;
+    text-align: center;
+}
+
+
+.form-group {
+    margin-left: 1%;
+}
+
+#sub {
+    margin-left: 8.5%;
+}
+
+.basketButton{
+     align-self: right;
+}
+
+
+#clothType {
+    
+    text-align: left;
+    padding-top: 10%;
+    
+}
+
+#finalImage {
+    float: left !important;
+    padding-left: 20%;
+}
+
+#clothType{
+    font-size: 2em;
+}
+#basketButton{
+        width: 15%;
+        height: 10%;
+        font-size:30px
+}
+
+#addbutton {
+    width: 15%;
+    height: 10%;
+    font-size: 30px
+}
+
+.catalogueTitle{
+    font-family: 'Brush Script MT', cursive;
+    text-align: center;
+    font-size: 2em;
+}

@@ -1,0 +1,12 @@
+{% extends 'headerFooter.html' %}
+{% load static %}
+{% block content %}
+
+<form action="{% url 'itemadd.new' %}" method='POST'>{% csrf_token %}
+    {{ form }}
+    
+    <button type="button" class="btn btn-success">Add</button>
+</form>
+
+
+{% endblock %}

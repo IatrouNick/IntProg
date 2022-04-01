@@ -1,0 +1,17 @@
+{% extends 'headerFooter.html' %}
+{% load static %}
+{% block content %}
+
+    <br class="choices">
+        <div id="page-container">
+            {% for c in clothesCart %}
+                <div id="finalImage">
+                    <img src="\static\images\{{c.type}}.jpg" class="imageSize"  width="80%" height="80%">
+                </div>
+                <div id"price" >
+                <p id="clothType"> {{ c.price|capfirst }}€</p>
+                <button id="basketButton" type="button" class="btn btn-primary" >Add to cart</button>      
+                </div>               
+            {% endfor %}
+        </div>
+{% endblock %}

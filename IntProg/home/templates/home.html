@@ -1,0 +1,30 @@
+{% extends 'headerFooter.html' %}
+{% load static %}
+{% block content %}
+
+    <br class="choices">
+        <div id="page-container">
+            <div id="content-wrap">
+                {% for c in clothesType %}
+                    <div class="items">
+                        <li class="list-group-item">      
+                        <a href = "{% url 'clothes_detail' c.id %}" class="list-group-item list-group-item-action list-group-item-primary">
+                        <img src="\static\images\{{c.id}}.jpg" class="imageSize" height="300">
+                        <br>
+                        {% if c.id == 1 %}
+                        <p class="catalogueTitle">Hats</p>
+                        {% elif c.id == 2 %}
+                        <p class="catalogueTitle">Dresses</p>
+                        {% elif c.id == 3 %}
+                        <p class="catalogueTitle">Shoes</p>
+                        {% elif c.id == 4 %}
+                        <p class="catalogueTitle">Bags</p>
+                        {% endif %}
+                        </a>
+                        </li>
+                    </div>                   
+                {% endfor %}
+            </div>
+        </div>
+    <br class="choices">
+{% endblock %}
