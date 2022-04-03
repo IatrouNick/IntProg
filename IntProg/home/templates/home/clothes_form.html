@@ -1,12 +1,19 @@
 {% extends 'headerFooter.html' %}
 {% load static %}
 {% block content %}
-
-<form action="{% url 'itemadd.new' %}" method='POST'>{% csrf_token %}
+{% if request.user.id == 1 %}
+<form  method='POST'>{% csrf_token %}
     {{ form }}
     
-    <button type="button" class="btn btn-success">Add</button>
+    
+    <button type="submit" class="btn btn-success">Submit</button>
 </form>
-
-
+    {% if form.errors %}
+        <div class="alert alert-danger my-5">
+            {{form.errors.title.as_text}}
+        </div>
+    {% endif %}
+{% else %}
+<p class="text-capitalize font-weight-bold text-center text-info" style = "font-size:20px;">You do not have permission to add items. Please contact an administrator if required.</p>
+{% endif %}
 {% endblock %}

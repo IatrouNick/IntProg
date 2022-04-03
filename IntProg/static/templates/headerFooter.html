@@ -21,10 +21,28 @@
                 <div class="navbar-header">
                     <a class="navbar-brand" id="title">FashionX</a>
                 </div>
+                
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item"><a class="nav-link" href={% url 'home' %} style="font-size:30px"> Home </a>
+                    <li class="nav-item"><a class="nav-link" href={% url 'home' %} style="font-size:30px">Home</a></li>
+                    {% if user.is_authenticated %}
+                        <li class="nav-item"><a class="btn btn-primary" href={% url 'logout' %} style="font-size:30px">Log out</a></li>
+                        {% if request.user.id == 1 %}
+                            <li class="nav-item"><a class="btn btn-secondary" href={% url 'item.new' %} style="font-size:30px">Add item</a></li>
+                        {% endif %}
+                    {% else %}
+                        <li class="nav-item"><a class="btn btn-primary" href={% url 'login' %} style="font-size:30px">Log in</a></li>
+                        <li class="nav-item"><a class="btn btn-secondary" href={% url 'signup' %} style="font-size:30px">Signup</a></li>
+                    {% endif %}  
+                    <li class="nav-item">
+                        <div id="searchBar"> 
+                        <form method='POST' action="{% url 'search' %}">{% csrf_token %}
+                            <input class"form-control" style="height:50px; width:150px" placeholder="Search..." name="searched">
+                            <button type'submit' class="btn btn-primary">Submit</button>
+                        </form>
+                        </div>
+                    </li>
                 </ul>
-
+                
             </div>
         </nav>
 

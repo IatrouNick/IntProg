@@ -1,0 +1,15 @@
+{% extends 'headerFooter.html' %}
+{% load static %}
+{% block content %}
+
+    <br class="choices">
+        <div id="page-container">
+                <div id="finalImage">
+                    <img src="\static\images\{{clothes.type}}.jpg" class="imageSize"  width="80%" height="80%">
+                </div>
+                <div id"price" >
+                <p id="clothType"> {{clothes.price|capfirst }}€</p>
+                <a class="btn btn-secondary" href={% url 'item.update' clothes.id %} style="font-size:30px" >Edit</a>      
+                </div>  
+        </div>
+{% endblock %}

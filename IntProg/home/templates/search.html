@@ -1,0 +1,24 @@
+{% extends 'headerFooter.html' %}
+{% load static %}
+{% block content %}
+
+{% if searched %}
+    <h1> Searched for {{ searched }}</h1>
+    {% for c in clothesSearched %}
+         <div class="items">
+            <li class="list-group-item">
+                <a href = "{% url 'clothesCart' c.type %}" class="list-group-item list-group-item-action list-group-item-primary">      
+                <img src="\static\images\{{c.type}}.jpg" class="imageSize" height="300"></a>
+                <br>
+                <p class="catalogueTitle">{{c.type}}</p>
+            </li>
+            </div>                   
+    {%endfor %%}
+{% else %}
+    <h1> Search not found</h1>
+
+{% endif %}
+
+
+
+{% endblock %}

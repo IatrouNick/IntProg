@@ -239,3 +239,11 @@ body {
     text-align: center;
     font-size: 2em;
 }
+
+#searchBar{
+    padding-top: 2%;
+}
+
+.nav-item{
+    margin-inline: 15px 0;
+}
