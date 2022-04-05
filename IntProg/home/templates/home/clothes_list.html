@@ -1,7 +1,7 @@
 {% extends 'headerFooter.html' %}
 {% load static %}
 {% block content %}
-
+{% if request.user.id == 1 %}
     <br class="choices">
         <div id="page-container">
             <div id="content-wrap">
@@ -19,4 +19,7 @@
             </div>
         </div>
     <br class="choices">
+{% else %}
+<p class="text-capitalize font-weight-bold text-center text-info" style = "font-size:20px;">You do not have permission to this page. Please contact an administrator if required.</p>
+{% endif %}
 {% endblock %}
