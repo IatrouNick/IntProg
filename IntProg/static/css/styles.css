@@ -188,9 +188,10 @@ body {
 /*Styles for indexpage */
 
 #title {
+    font-family: "Cursive";
     font-size: 2em;
-    color: aliceblue;
-    text-align: center;
+    color: rgb(221, 187, 74);
+     
 }
 
 
@@ -247,3 +248,4 @@ body {
 .nav-item{
     margin-inline: 15px 0;
 }
+

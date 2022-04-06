@@ -17,6 +17,7 @@ from django.contrib.auth.views import LoginView,LogoutView
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import redirect
 from django.db.models import Q
+from django.views.generic.edit import DeleteView
 
 class SignupView(CreateView):
     form_class =UserCreationForm
@@ -59,6 +60,11 @@ def clothesCart(request, type):
     return render(request, 'clothesCart.html', {
         'clothesCart': clothesCart,
     })
+
+class itemDelete(DeleteView):
+    model = Clothes
+    success_url = '/list'
+    template_name = 'home/clothes_deleteView.html'
 
 
 class itemAdd(CreateView):

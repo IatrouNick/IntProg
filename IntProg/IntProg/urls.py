@@ -9,10 +9,9 @@ urlpatterns = [
     path('clothes/<str:type>', views.clothesCart, name='clothesCart'),
     path('item/new', views.itemAdd.as_view(), name="item.new"),
     path('list', views.itemList.as_view(), name="list"),
-
     path('list/<int:pk>/', views.itemDetail.as_view(), name='item.detail'),
-
     path('list/<int:pk>/edit', views.itemUpdate.as_view(), name="item.update"),
+    path('list/<int:pk>/delete', views.itemDelete.as_view(), name="item.delete"),
     path('login', views.LoginInterfaceView.as_view(), name="login"),
     path('logout',views.LogoutInterfaceView.as_view(), name= 'logout'),
     path('signup', views.SignupView.as_view(), name='signup'),

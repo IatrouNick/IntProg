@@ -11,7 +11,8 @@
                         <a href = "{% url 'clothesCart' c.type %}" class="list-group-item list-group-item-action list-group-item-primary">      
                         <img src="\static\images\{{c.type}}.jpg" class="imageSize" height="300"></a>
                         <br>
-                        <p class="catalogueTitle">{{c.type}}</p>
+                        <p class="catalogueTitle">{{c.type}} {{ c.price|capfirst }}€</p>
+                        
                         </li>
                     </div>                   
                 {% endfor %}

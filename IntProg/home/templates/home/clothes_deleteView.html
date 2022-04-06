@@ -1,0 +1,21 @@
+{% extends 'headerFooter.html' %}
+{% load static %}
+{% block content %}
+{% if request.user.id == 1 %} 
+    <form  method='POST'>{% csrf_token %}
+        <div id="deleteItem">
+            <p style="font-size: 50px;" style="text-align: center;">Are you sure you want to delete the item?</p>
+        </div>
+        <div id="finalImage">
+            <img src="\static\images\{{clothes.type}}.jpg" class="imageSize"  width="80%" height="80%">
+            </div>
+            <div id"price" >
+            <p id="clothType"> {{clothes.price|capfirst }}€</p>
+            </div>
+    
+        <button type="submit" class="btn btn-danger">Confirm</button>
+        </form>
+{% else %}
+<p class="text-capitalize font-weight-bold text-center text-info" style = "font-size:20px;">You do not have permission to this page. Please contact an administrator if required.</p>
+{% endif %}
+{% endblock %}
