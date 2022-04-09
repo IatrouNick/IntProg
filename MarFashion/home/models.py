@@ -9,7 +9,7 @@ class Clothes(models.Model):
 
     idCloth = models.IntegerField()  # 1:hats 2:dresses 3:shoes 4:bags
     id = models.IntegerField(primary_key=True)
-    type = models.CharField(max_length=50)  # imgURL ex:hat1, shoes1
+    type = models.CharField(max_length=50)  
     price = models.DecimalField(max_digits=5, decimal_places=2)
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="clothes")
