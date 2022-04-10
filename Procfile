@@ -1,1 +1,1 @@
-web: python MarFashion/manage.py runserver 0.0.0.0 %PORT%
+web: gunicorn --chdir app IntProg.wsgi:application --log-file - --log-level debug
