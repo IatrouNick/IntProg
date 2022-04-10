@@ -13,6 +13,10 @@ class Clothes(models.Model):
     price = models.DecimalField(max_digits=5, decimal_places=2)
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="clothes")
+    
+    def clean(self):
+        if not self.id:
+            self.id = Clothes.objects.last().id + 1
 
 
 class ClothesType(models.Model):
@@ -28,4 +32,6 @@ class ClothesType(models.Model):
     
     def __str__(self):
         return self.typeCloth
+    
+
 
