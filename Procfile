@@ -1,1 +1,1 @@
-web: gunicorn --chdir home IntProg.wsgi:application --log-file - --log-level debug
+web: gunicorn --chdir MarFashion IntProg.wsgi:application --log-file - --log-level debug
