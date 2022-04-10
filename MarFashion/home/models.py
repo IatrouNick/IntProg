@@ -1,4 +1,4 @@
-#from turtle import ondrag
+from turtle import ondrag
 from django.db import models
 from django.templatetags.static import static
 from django.contrib.auth.models import User
