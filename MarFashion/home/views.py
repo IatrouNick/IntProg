@@ -37,7 +37,7 @@ class SignupView(CreateView):
 #VIEWS
 #TO GET THE 4 TYPES OF CLOTHES
 def home(request):
-    clothesType = ClothesType.objects.all
+    clothesType = ClothesType.objects.all()
     return render(request, 'home.html', { 'clothesType': clothesType, })
 
 
