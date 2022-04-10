@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
+from xmlrpc.client import FastParser
 import django_heroku
 from pathlib import Path
 
@@ -147,9 +148,9 @@ LOGIN_REDIRECT_URL = "/"
 
 PORT = os.getenv("PORT", default="5000")
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+DEBUG = False
 
-DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'True'
+#DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'True'
 
 ALLOWED_HOSTS = ["url"]
 
