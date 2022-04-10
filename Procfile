@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath app IntProg.wsgi:application --log-file - --log-level debug
+web: gunicorn --chdir home IntProg.wsgi:application --log-file - --log-level debug
